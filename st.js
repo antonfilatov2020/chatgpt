@@ -3,7 +3,7 @@ Run this model in Javascript
 
 > npm install openai
 */
-import openai from "openai";
+import OpenAI from "openai";
 
 import { component$ } from "@builder.io/qwik";
 import { routeAction$, Form } from "@builder.io/qwik-city";
