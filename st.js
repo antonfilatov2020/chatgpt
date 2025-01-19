@@ -12,7 +12,7 @@ const token = process.env["github_pat_11AOC3ECQ061m0PzKjjAdH_BnoscinwsNlqD8383mC
 export async function main() {
 
   const client = new OpenAI({
-    baseURL: "https://models.inference.ai.azure.com",
+    baseURL: "https://api.openai.com/v1/chat/completions",
     apiKey: "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"
   });
 
