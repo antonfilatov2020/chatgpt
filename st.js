@@ -12,7 +12,7 @@ const token = process.env["github_pat_11AOC3ECQ061m0PzKjjAdH_BnoscinwsNlqD8383mC
 export async function main() {
 
   const client = new OpenAI({
-    baseURL: "https://api.openai.com/",
+    baseURL: "https://api.openai.com/v1/models",
     apiKey: "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"
   });
 
@@ -21,7 +21,7 @@ export async function main() {
       { role:"system", content: "" },
       { role:"user", content: "What is the capital of France?" }
     ],
-    model: "gpt-4o",
+    model: "gpt-3.5-turbo",
     temperature: 1,
     max_tokens: 4096,
     top_p: 1
