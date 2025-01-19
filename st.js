@@ -7,7 +7,7 @@ import OpenAI from "openai";
 
 // To authenticate with the model you will need to generate a personal access token (PAT) in your GitHub settings. 
 // Create your PAT token by following instructions here: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
-const token = process.env["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"];
+const token = process.env["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"];
 
 export async function main() {
 
