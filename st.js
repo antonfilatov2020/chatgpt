@@ -13,7 +13,7 @@ export async function main() {
 
   const client = new OpenAI({
     baseURL: "https://models.inference.ai.azure.com",
-    apiKey: token
+    apiKey: "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"
   });
 
   const response = await client.chat.completions.create({
