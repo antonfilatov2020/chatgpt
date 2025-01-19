@@ -21,7 +21,7 @@ export async function main() {
       { role:"system", content: "" },
       { role:"user", content: "What is the capital of France?" }
     ],
-    model: "gpt-3.5-turbo",
+    model: "gpt-4",
     temperature: 1,
     max_tokens: 4096,
     top_p: 1
