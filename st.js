@@ -33,3 +33,35 @@ export async function main() {
 main().catch((err) => {
   console.error("The sample encountered an error:", err);
 });
+
+
+export default component$(() => {
+  const action = usePromptAction()
+
+  return (
+    <main class="max-w-4xl mx-auto p-4">
+      <h1 class="text-4xl">Hi 👋</h1>
+
+      <Form action={action} class="grid gap-4">
+        <div>
+          <label for="prompt">Prompt</label>
+          <textarea name="prompt" id="prompt">
+            Tell me a joke
+          </textarea>
+        </div>
+
+        <div>
+          <button type="submit" aria-disabled={action.isRunning}>
+            {action.isRunning ? 'One sec...' : 'Tell me'}
+          </button>
+        </div>
+      </Form>
+
+      {action.value && (
+        <article class="mt-4 border border-2 rounded-lg p-4 bg-[canvas]">
+          <p>{action.value}</p>
+        </article>
+      )}
+    </main>
+  );
+});
