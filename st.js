@@ -27,7 +27,7 @@ export async function main() {
     top_p: 1
   });
 
-  console.log(response.choices[0].message.content);
+  document.write(response.choices[0].message.content);
 }
 
 main().catch((err) => {
