@@ -27,7 +27,19 @@ export async function main() {
     top_p: 1
   });
 
-  document.write(response.choices[0].message.content);
+    const response = await fetch('https://api.openai.com/v1/models', {
+    method: 'post',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: "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",
+    },
+    body: JSON.stringify(body)
+  })
+  const data = await response.json();
+
+  return data.choices[0].message.content;
+
+  //return response.choices[0].message.content;
 }
 
 main().catch((err) => {
