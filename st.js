@@ -5,12 +5,13 @@ Run this model in Javascript
 */
 import OpenAI from "openai";
 
+import { component$ } from "@builder.io/qwik";
+import { routeAction$, Form } from "@builder.io/qwik-city";
+
 // To authenticate with the model you will need to generate a personal access token (PAT) in your GitHub settings. 
 // Create your PAT token by following instructions here: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
 const token = process.env["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"];
 
-import { component$ } from "@builder.io/qwik";
-import { routeAction$, Form } from "@builder.io/qwik-city";
 
 export const usePromptAction = routeAction$(async (formData, requestEvent) => {
 
