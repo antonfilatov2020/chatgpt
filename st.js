@@ -16,9 +16,15 @@ export async function main() {
     apiKey: token
   });
 
+  const prompt = formData.prompt
+  const body = {
+    model: 'gpt-4',
+    messages: [{ role: 'user', content: prompt }]
+  }
+  
   const response = await client.v1.models.create({
     messages: [
-      { role:"system", content: "" },
+      { role:"system", content: body },
       { role:"user", content: "What is the capital of France?" }
     ],
     model: "gpt-4",
