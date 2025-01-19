@@ -14,7 +14,6 @@ import { routeAction$, Form } from "@builder.io/qwik-city";
 
 export const usePromptAction = routeAction$(async (formData, requestEvent) => {
 
-export async function main() {
 
   const client = new OpenAI({
     baseURL: "https://api.openai.com/v1/models",
@@ -40,8 +39,7 @@ export async function main() {
 
 
   return response.choices[0].message.content;
-}
-
+});
 
 export default component$(() => {
   const action = usePromptAction()
