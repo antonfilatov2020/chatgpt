@@ -16,7 +16,7 @@ export async function main() {
     apiKey: "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"
   });
 
-  const response = await client.chat.completions.create({
+  const response = await client.models.create({
     messages: [
       { role:"system", content: "" },
       { role:"user", content: "What is the capital of France?" }
