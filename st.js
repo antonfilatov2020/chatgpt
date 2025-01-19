@@ -42,10 +42,6 @@ export async function main() {
   return response.choices[0].message.content;
 }
 
-main().catch((err) => {
-  console.error("The sample encountered an error:", err);
-});
-
 
 export default component$(() => {
   const action = usePromptAction()
